@@ -7,7 +7,7 @@ namespace save_manager
         private static void Main(string[] args)
         {
             Colorful.Console.ForegroundColor = Color.FromArgb(255, 151, 124, 163);
-            Console.Title = "From Software Games Save Manager ";
+            Console.Title = "From Software Games Save Manager";
 
             Console.WriteLine(" ┌─────$> Select supported games <$────────────────────────────────────────────────────────────────────┐\n" +
                               " │?>                                                                                                   │\n" +
