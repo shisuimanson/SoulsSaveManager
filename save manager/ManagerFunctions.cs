@@ -66,7 +66,14 @@ namespace save_manager
         {
             ConsoleUtility.RemoveString();
 
-            Utility.GetFolderList(StaticPath.DesktopPath + $"/{customFolderName}");
+            if(Directory.Exists(StaticPath.DesktopPath + $"/{customFolderName}"))
+                Utility.GetFolderList(StaticPath.DesktopPath + $"/{customFolderName}");
+            else
+            {
+                Colorful.Console.WriteLine($" [!]> {customFolderName} doesn't exist", Color.Red);
+                return;
+            }
+
 
             Colorful.Console.Write(" [?]> Folder name >>> ", Color.FromArgb(255, 255, 110, 144));
             string? newSaveCustomFolderName = Console.ReadLine();

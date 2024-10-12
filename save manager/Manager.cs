@@ -16,7 +16,7 @@ namespace save_manager
                     while (true)
                     {
                         Console.Title = "Dark Souls Remastered";
-                        SelectBackupFunctions(StaticPath.DarkSoulsRemasteredPath, "NBGI/DARK SOULS REMASTERED", "DarkSoulsRemastered.save");
+                        SelectBackupFunctions(StaticPath.DarkSoulsRemasteredPath, "NBGI/DARK SOULS REMASTERED", "DarkSoulsRemastered_save");
                     }
                    
                 case ConsoleKey.D2:
@@ -24,28 +24,28 @@ namespace save_manager
                     while (true)
                     {
                         Console.Title = "Dark Souls II";
-                        SelectBackupFunctions(StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII.save");
+                        SelectBackupFunctions(StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII_save");
                     }
                 case ConsoleKey.D3:
                     ConsoleUtility.InvokeText("Dark Souls III");
                     while (true)
                     {
                         Console.Title = "Dark Souls III";
-                        SelectBackupFunctions(StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII.save");
+                        SelectBackupFunctions(StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII_save");
                     }
                 case ConsoleKey.D4:
                     ConsoleUtility.InvokeText("Sekiro: Shadow Die Twice");
                     while (true)
                     {
                         Console.Title = "Sekiro";
-                        SelectBackupFunctions(StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice.save");
+                        SelectBackupFunctions(StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
                     }
                 case ConsoleKey.D5:
                     ConsoleUtility.InvokeText("Elden Ring");
                     while (true)
                     {
                         Console.Title = "Elden Ring";
-                        SelectBackupFunctions(StaticPath.EldenRingPath, "EldenRing", "EldenRing.save");
+                        SelectBackupFunctions(StaticPath.EldenRingPath, "EldenRing", "EldenRing_save");
                     }
             }
         }
