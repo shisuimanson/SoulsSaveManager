@@ -2,6 +2,26 @@
 {
     internal class Utility
     {
+        public static void InvokeText(string gameName)
+        {
+            int visualLineLenght = gameName.Length;
+            for (int i = 0; visualLineLenght < 100; i++)
+            {
+                visualLineLenght++;
+            }
+            visualLineLenght = visualLineLenght - gameName.Length;
+
+            Console.WriteLine($" ┌─────$> {gameName} <${new string('─', visualLineLenght)}┐\n" +
+                                   " │!> To change the game prees 'F1'                                                                               │\n" +
+                                   " └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘\n" +
+                                   " ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐\n" +
+                                   " │$> [1]> Backup save to default folder                                                                │\n" +
+                                   " │$> [2]> Load save from default folder                                                                │\n" +
+                                   " │$> [3]> Backup save to another directory                                                             │\n" +
+                                   " │$> [4]> Load save from another directory                                                             │\n" +
+                                   " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n"
+                                  );
+        }
         internal static void GetFolderList(string gameCustomBackupFolder)
         {
             var directories = new DirectoryInfo(gameCustomBackupFolder).GetDirectories();

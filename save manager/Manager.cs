@@ -7,7 +7,7 @@ namespace save_manager
 
         internal static void SelectGame(string gameName, string savePath, string saveFolderName,string customFolderName)
         {
-            ConsoleUtility.InvokeText(gameName);
+            Utility.InvokeText(gameName);
             while (true)
             {
                 Console.Title = gameName;
