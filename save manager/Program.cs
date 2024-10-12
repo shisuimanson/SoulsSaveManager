@@ -11,17 +11,21 @@ namespace save_manager
 
             Console.WriteLine(" ┌─────$> Select supported games <$────────────────────────────────────────────────────────────────────┐\n" +
                               " │?>                                                                                                   │\n" +
-                              " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n" +
-                              " ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐\n" +
-                              " │$> [1]> Dark Souls: Prepare To Die Edition                                                           │\n" +
-                              " │$> [2]> Dark Souls Remastered                                                                        │\n" +
-                              " │$> [3]> Dark Souls II                                                                                │\n" +
-                              " │$> [4]> Dark Souls III                                                                               │\n" +
-                              " │$> [5]> Sekiro: Shadow Die Twice                                                                     │\n" +
-                              " │$> [6]> Elden Ring                                                                                   │\n" +
-                              " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n"
-                              ); Console.SetCursorPosition(4, Console.CursorTop - 10);
-            Manager.SelectGame();
+                              " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘"
+                              ); 
+
+            Console.WriteLine(" ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+
+            for (int i = 0; i < GameList.SoulsGameList.Count; i++)
+            {
+                Console.WriteLine($" │$> [{i + 1}]> {GameList.SoulsGameList[i]}" + 
+                    $"{new string(' ', (GameList.SoulsGameList.Max(x => x.Length) - GameList.SoulsGameList[i].Length) + 59)}│");
+            }
+
+            Console.WriteLine(" └─────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+            Console.SetCursorPosition(4, Console.CursorTop - 10);
+
+            Manager.GameSelection();
         }
     }
 }

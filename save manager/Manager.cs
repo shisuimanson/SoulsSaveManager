@@ -4,7 +4,18 @@ namespace save_manager
 {
     internal class Manager
     {
-        public static void SelectGame()
+
+        internal static void SelectGame(string gameName, string savePath, string saveFolderName,string customFolderName)
+        {
+            ConsoleUtility.InvokeText(gameName);
+            while (true)
+            {
+                Console.Title = gameName;
+                SelectBackupFunctions(savePath, saveFolderName, customFolderName);
+            }
+        }
+
+        public static void GameSelection()
         {
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             Console.Clear();
@@ -12,48 +23,28 @@ namespace save_manager
             switch (keyInfo.Key)
             {
                 case ConsoleKey.D1:
-                ConsoleUtility.InvokeText("Dark Souls: Prepare To Die Edition");
-                    while (true)
-                    {
-                        Console.Title = "Dark Souls: Prepare To Die Edition";
-                        SelectBackupFunctions(StaticPath.DarkSoulsPreparePath, "NBGI/DarkSouls", "DarkSoulsPrepareToDieEdition_save");
-                    }
+                    SelectGame(GameList.SoulsGameList[0], StaticPath.DarkSoulsPreparePath, "NGBI/DarkSouls", "DarkSoulsPrepareToDieEdition_save");
+                break;
+
                 case ConsoleKey.D2:
-                    ConsoleUtility.InvokeText("Dark Souls Remastered");
-                    while (true)
-                    {
-                        Console.Title = "Dark Souls Remastered";
-                        SelectBackupFunctions(StaticPath.DarkSoulsRemasteredPath, "NBGI/DARK SOULS REMASTERED", "DarkSoulsRemastered_save");
-                    }
-                   
+                    SelectGame(GameList.SoulsGameList[1], StaticPath.DarkSoulsRemasteredPath, "NGBI/DARK SOULS REMASTERED", "DarkSoulsRemastered_save");
+                break;
+
                 case ConsoleKey.D3:
-                    ConsoleUtility.InvokeText("Dark Souls II");
-                    while (true)
-                    {
-                        Console.Title = "Dark Souls II";
-                        SelectBackupFunctions(StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII_save");
-                    }
+                    SelectGame(GameList.SoulsGameList[2], StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII_save");
+                break;
+
                 case ConsoleKey.D4:
-                    ConsoleUtility.InvokeText("Dark Souls III");
-                    while (true)
-                    {
-                        Console.Title = "Dark Souls III";
-                        SelectBackupFunctions(StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII_save");
-                    }
+                    SelectGame(GameList.SoulsGameList[3], StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII_save");
+                break;
+
                 case ConsoleKey.D5:
-                    ConsoleUtility.InvokeText("Sekiro: Shadow Die Twice");
-                    while (true)
-                    {
-                        Console.Title = "Sekiro";
-                        SelectBackupFunctions(StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
-                    }
+                    SelectGame(GameList.SoulsGameList[3], StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
+                break;
+
                 case ConsoleKey.D6:
-                    ConsoleUtility.InvokeText("Elden Ring");
-                    while (true)
-                    {
-                        Console.Title = "Elden Ring";
-                        SelectBackupFunctions(StaticPath.EldenRingPath, "EldenRing", "EldenRing_save");
-                    }
+                    SelectGame(GameList.SoulsGameList[4], StaticPath.EldenRingPath, "EldenRing", "EldenRing_save");
+                break;
             }
         }
 

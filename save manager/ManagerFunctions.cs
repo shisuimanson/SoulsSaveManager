@@ -74,7 +74,6 @@ namespace save_manager
                 return;
             }
 
-
             Colorful.Console.Write(" [?]> Folder name >>> ", Color.FromArgb(255, 255, 110, 144));
             string? newSaveCustomFolderName = Console.ReadLine();
 
