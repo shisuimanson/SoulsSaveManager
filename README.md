@@ -1,3 +1,4 @@
 Simple Save Manager
 
-![image](https://github.com/user-attachments/assets/b34d30a0-e0b1-4484-9aa0-e8590065d71e)
+![image](https://github.com/user-attachments/assets/b36043ba-1fe4-4b47-95d1-b1c42437a5fa)
+
