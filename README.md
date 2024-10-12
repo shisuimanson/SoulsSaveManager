@@ -1,7 +1,10 @@
 #######################################################################################################
-#                                       Simple Save Manager                                           #
+#                                       Simple Save Manager                                           
+# For FromSoftware soulslike games
 #######################################################################################################
-![image](https://github.com/user-attachments/assets/3b81dd7b-252c-4587-871e-71a8e0c74abc)
-![image](https://github.com/user-attachments/assets/9d9e3153-00fe-4ac1-a6f0-8af8598a8275)
+![image](https://github.com/user-attachments/assets/3f289d61-14de-4c4c-abcb-982840947e60)
+#######################################################################################################
+![image](https://github.com/user-attachments/assets/bf00eee1-217d-4693-acc5-529e6bc28e9a)
+
 
 
