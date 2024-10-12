@@ -13,11 +13,12 @@ namespace save_manager
                               " │?>                                                                                                   │\n" +
                               " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n" +
                               " ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐\n" +
-                              " │$> [1]> Dark Souls Remastered                                                                        │\n" +
-                              " │$> [2]> Dark Souls II                                                                                │\n" +
-                              " │$> [3]> Dark Souls III                                                                               │\n" +
-                              " │$> [4]> Sekiro: Shadow Die Twice                                                                     │\n" +
-                              " │$> [5]> Elden Ring                                                                                   │\n" +
+                              " │$> [1]> Dark Souls: Prepare To Die Edition                                                           │\n" +
+                              " │$> [2]> Dark Souls Remastered                                                                        │\n" +
+                              " │$> [3]> Dark Souls II                                                                                │\n" +
+                              " │$> [4]> Dark Souls III                                                                               │\n" +
+                              " │$> [5]> Sekiro: Shadow Die Twice                                                                     │\n" +
+                              " │$> [6]> Elden Ring                                                                                   │\n" +
                               " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n"
                               ); Console.SetCursorPosition(4, Console.CursorTop - 10);
             Manager.SelectGame();

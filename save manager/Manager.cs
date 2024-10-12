@@ -12,6 +12,13 @@ namespace save_manager
             switch (keyInfo.Key)
             {
                 case ConsoleKey.D1:
+                ConsoleUtility.InvokeText("Dark Souls: Prepare To Die Edition");
+                    while (true)
+                    {
+                        Console.Title = "Dark Souls: Prepare To Die Edition";
+                        SelectBackupFunctions(StaticPath.DarkSoulsPreparePath, "NBGI/DarkSouls", "DarkSoulsPrepareToDieEdition_save");
+                    }
+                case ConsoleKey.D2:
                     ConsoleUtility.InvokeText("Dark Souls Remastered");
                     while (true)
                     {
@@ -19,28 +26,28 @@ namespace save_manager
                         SelectBackupFunctions(StaticPath.DarkSoulsRemasteredPath, "NBGI/DARK SOULS REMASTERED", "DarkSoulsRemastered_save");
                     }
                    
-                case ConsoleKey.D2:
+                case ConsoleKey.D3:
                     ConsoleUtility.InvokeText("Dark Souls II");
                     while (true)
                     {
                         Console.Title = "Dark Souls II";
                         SelectBackupFunctions(StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII_save");
                     }
-                case ConsoleKey.D3:
+                case ConsoleKey.D4:
                     ConsoleUtility.InvokeText("Dark Souls III");
                     while (true)
                     {
                         Console.Title = "Dark Souls III";
                         SelectBackupFunctions(StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII_save");
                     }
-                case ConsoleKey.D4:
+                case ConsoleKey.D5:
                     ConsoleUtility.InvokeText("Sekiro: Shadow Die Twice");
                     while (true)
                     {
                         Console.Title = "Sekiro";
                         SelectBackupFunctions(StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
                     }
-                case ConsoleKey.D5:
+                case ConsoleKey.D6:
                     ConsoleUtility.InvokeText("Elden Ring");
                     while (true)
                     {
