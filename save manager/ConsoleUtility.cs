@@ -2,8 +2,6 @@
 {
     internal class ConsoleUtility
     {
-        
-
         public static void RemoveMoreString(int count)
         {
             for(int i = 0; i < count; i++)
