@@ -24,19 +24,19 @@ namespace save_manager
             {
                 case ConsoleKey.D1:
                     SelectGame(GameList.SoulsGameList[0], StaticPath.DarkSoulsPreparePath, "NGBI/DarkSouls", "DarkSoulsPrepareToDieEdition_save");
-                break;
+                    break;
 
                 case ConsoleKey.D2:
                     SelectGame(GameList.SoulsGameList[1], StaticPath.DarkSoulsRemasteredPath, "NGBI/DARK SOULS REMASTERED", "DarkSoulsRemastered_save");
-                break;
+                    break;
 
                 case ConsoleKey.D3:
                     SelectGame(GameList.SoulsGameList[2], StaticPath.DarkSoulsIIPath, "DarkSoulsII", "DarkSoulsII_save");
-                break;
+                    break;
 
                 case ConsoleKey.D4:
                     SelectGame(GameList.SoulsGameList[3], StaticPath.DarkSoulsIIIPath, "DarkSoulsIII", "DarkSoulsIII_save");
-                break;
+                    break;
 
                 case ConsoleKey.D5:
                     SelectGame(GameList.SoulsGameList[4], StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
@@ -60,7 +60,7 @@ namespace save_manager
             {
                 case ConsoleKey.F1:
                     Console.Clear();
-                    Process.Start(System.AppDomain.CurrentDomain.FriendlyName);
+                    Process.Start(AppDomain.CurrentDomain.FriendlyName);
                     Environment.Exit(0);
                 break;
 
@@ -78,6 +78,10 @@ namespace save_manager
 
                 case ConsoleKey.D4:
                     ManagerFunctions.LoadBackupFromCustomFolder(gameSavePath, gameSaveFolderName, customFolderName);
+                break;
+
+                case ConsoleKey.D5:
+                    AutoSave.ActivateAutoSave(gameSavePath, gameSaveFolderName, customFolderName);
                 break;
             }
         }
