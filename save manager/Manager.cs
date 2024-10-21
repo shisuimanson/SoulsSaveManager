@@ -39,11 +39,11 @@ namespace save_manager
                 break;
 
                 case ConsoleKey.D5:
-                    SelectGame(GameList.SoulsGameList[3], StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
+                    SelectGame(GameList.SoulsGameList[4], StaticPath.SekiroPath, "Sekiro", "SekiroShadowDieTwice_save");
                 break;
 
                 case ConsoleKey.D6:
-                    SelectGame(GameList.SoulsGameList[4], StaticPath.EldenRingPath, "EldenRing", "EldenRing_save");
+                    SelectGame(GameList.SoulsGameList[5], StaticPath.EldenRingPath, "EldenRing", "EldenRing_save");
                 break;
             }
         }
