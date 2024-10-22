@@ -19,6 +19,7 @@
                                    " │$> [2]> Load save from default folder                                                                │\n" +
                                    " │$> [3]> Backup save to another directory                                                             │\n" +
                                    " │$> [4]> Load save from another directory                                                             │\n" +
+                                  //$" │$> [5]> AutoSave Status: {AutoSave.AutoSaveStatus + new string(' ', (AutoSave.AutoSaveStatus.ToString().Length + 71) - AutoSave.AutoSaveStatus.ToString().Length)}│\n" +
                                    " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n"
                                   );
         }

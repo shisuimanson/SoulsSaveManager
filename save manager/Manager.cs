@@ -80,9 +80,9 @@ namespace save_manager
                     ManagerFunctions.LoadBackupFromCustomFolder(gameSavePath, gameSaveFolderName, customFolderName);
                 break;
 
-                case ConsoleKey.D5:
-                    AutoSave.ActivateAutoSave(gameSavePath, gameSaveFolderName, customFolderName);
-                break;
+                //case ConsoleKey.D5:
+                //    AutoSave.ActivateAutoSave(gameSavePath, gameSaveFolderName, customFolderName);
+                //break;
             }
         }
     }

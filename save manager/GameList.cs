@@ -4,12 +4,12 @@
     {
         public static List<string> SoulsGameList = new List<string>()
         {
-            new string("Dark Souls: Prepare To Die Edition"),
-            new string("Dark Souls: Remastered"),
-            new string("Dark Souls II"),
-            new string("Dark Souls III"),
-            new string("Sekiro: Shadow Die Twice"),
-            new string("Elden Ring")
+            "Dark Souls: Prepare To Die Edition",
+            "Dark Souls: Remastered",
+            "Dark Souls II",
+            "Dark Souls III",
+            "Sekiro: Shadow Die Twice",
+            "Elden Ring"
         };
     }
 }
