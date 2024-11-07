@@ -58,6 +58,8 @@ namespace SoulsSaveManager
                     case ConsoleKey.D6:
                         saveManager = new SaveManager("Elden Ring", WorkingPaths.EldenRingPath, "EldenRing", "EldenRing_save");
                         break;
+                    default: continue;
+
                 }
 
                 Console.Title = saveManager.GameName;

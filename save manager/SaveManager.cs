@@ -47,6 +47,7 @@ namespace SoulsSaveManager
             {
                 SelectBackupFunctions();
             }
+
             Console.Clear();
         }
 
