@@ -16,7 +16,7 @@ namespace save_manager
 
             Console.WriteLine(" ┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐");
 
-            for (int i = 0; i < GameList.SoulsGameList.Count; i++)
+            for (int i = 0; i < Manager.SoulsGameList.Count(); i++)
             {
                 Console.WriteLine($" │$> [{i + 1}]> {GameList.SoulsGameList[i]}" + 
                     $"{new string(' ', (GameList.SoulsGameList.Max(x => x.Length) - GameList.SoulsGameList[i].Length) + 59)}│");
