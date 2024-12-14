@@ -75,7 +75,7 @@ namespace SoulsSaveManager
                             }
                         }
 
-                        //WorkingPaths.BloodbornePath = new StreamReader(bbConfigPath).ReadLine() + "/user/savedata/1/CUSA03173";
+                        WorkingPaths.BloodbornePath = new StreamReader(bbConfigPath).ReadLine() + "/user/savedata/1/CUSA03173";
 
                         saveManager = new SaveManager("Bloodborne", WorkingPaths.BloodbornePath, "CUSA03173", "Bloodborne_save");
                         break;
