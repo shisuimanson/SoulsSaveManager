@@ -58,6 +58,27 @@ namespace SoulsSaveManager
                     case ConsoleKey.D6:
                         saveManager = new SaveManager("Elden Ring", WorkingPaths.EldenRingPath, "EldenRing", "EldenRing_save");
                         break;
+                    case ConsoleKey.D7:
+
+                        string bbConfigPath = Environment.CurrentDirectory + "/config.cfg";
+
+                        if (!File.Exists(bbConfigPath))
+                        {
+                            using (StreamWriter sw = new StreamWriter(new FileStream(bbConfigPath, FileMode.OpenOrCreate)))
+                            {
+                                Console.Write("[!]> Specify the path to ShadPS4 emulator folder: ");
+                                sw.WriteLine(Console.ReadLine());
+
+                                sw.Dispose();
+
+                                Console.Clear();
+                            }
+                        }
+
+                        //WorkingPaths.BloodbornePath = new StreamReader(bbConfigPath).ReadLine() + "/user/savedata/1/CUSA03173";
+
+                        saveManager = new SaveManager("Bloodborne", WorkingPaths.BloodbornePath, "CUSA03173", "Bloodborne_save");
+                        break;
                     default: continue;
 
                 }

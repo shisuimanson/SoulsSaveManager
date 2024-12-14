@@ -13,7 +13,8 @@ namespace SoulsSaveManager
             "Dark Souls II",
             "Dark Souls III",
             "Sekiro: Shadow Die Twice",
-            "Elden Ring"
+            "Elden Ring",
+            "Bloodborne"
         ];
         #endregion
 

@@ -10,5 +10,6 @@
         internal static string DarkSoulsIIIPath = AppDataPath + "/DarkSoulsIII";
         internal static string SekiroPath = AppDataPath + "/Sekiro";
         internal static string EldenRingPath = AppDataPath + "/EldenRing";
+        internal static string BloodbornePath;
     }
 }
