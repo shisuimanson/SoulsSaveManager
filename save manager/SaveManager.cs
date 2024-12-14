@@ -40,6 +40,7 @@ namespace SoulsSaveManager
                    " │$> [2]> Load save from default folder                                                                │\n" +
                    " │$> [3]> Backup save to another directory                                                             │\n" +
                    " │$> [4]> Load save from another directory                                                             │\n" +
+                   " │$> [5]> Delete save                                                                                  │\n" +
                    " └─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n"
                    );
 
@@ -78,6 +79,9 @@ namespace SoulsSaveManager
                 case ConsoleKey.D4:
                     LoadBackupFromCustomFolder();
                     break;
+                case ConsoleKey.D5:
+                    DeleteSave();
+                    break;
             }
         }
 
@@ -99,6 +103,26 @@ namespace SoulsSaveManager
             Colorful.Console.WriteLine($" [!]> Default save succefull backuped at {DateTime.Now:hh:mm:ss}",
                 Color.FromArgb(255, 198, 107, 255));
         }
+
+        private void LoadBackupFromDefaulFolder()
+        {
+            if (!Directory.Exists(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{_saveFolderName}"))
+            {
+                ConsoleUtility.RemoveLine();
+                Colorful.Console.WriteLine(" [!]> Backup save directory is an empty", Color.Red);
+                return;
+            }
+
+            if (Directory.Exists(_savePath))
+                Directory.Delete(_savePath, true);
+
+            Utility.CopyDirectory(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{_saveFolderName}", _savePath, true);
+
+            ConsoleUtility.RemoveLine();
+            Colorful.Console.WriteLine($" [!]> Default save succefull loaded at " + $"{DateTime.Now:hh:mm:ss}",
+                Color.FromArgb(255, 255, 110, 144));
+        }
+
         private void MakeBackupToCustomFolder()
         {
             if (!Directory.Exists(_savePath))
@@ -118,24 +142,7 @@ namespace SoulsSaveManager
             Colorful.Console.WriteLine($" [!]> Save succefull backuped to \"{newSave_customFolderName}\" folder at " + $"{DateTime.Now.ToString("hh:mm:ss")}",
                 Color.FromArgb(255, 198, 107, 255));
         }
-        private void LoadBackupFromDefaulFolder()
-        {
-            if (!Directory.Exists(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{_saveFolderName}"))
-            {
-                ConsoleUtility.RemoveLine();
-                Colorful.Console.WriteLine(" [!]> Backup save directory is an empty", Color.Red);
-                return;
-            }
 
-            if (Directory.Exists(_savePath))
-                Directory.Delete(_savePath, true);
-
-            Utility.CopyDirectory(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{_saveFolderName}", _savePath, true);
-
-            ConsoleUtility.RemoveLine();
-            Colorful.Console.WriteLine($" [!]> Default save succefull loaded at " + $"{DateTime.Now:hh:mm:ss}",
-                Color.FromArgb(255, 255, 110, 144));
-        }
         private void LoadBackupFromCustomFolder()
         {
             ConsoleUtility.RemoveLine();
@@ -154,7 +161,7 @@ namespace SoulsSaveManager
             if (!Directory.Exists(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{newSave_customFolderName}") || newSave_customFolderName == "")
             {
                 ConsoleUtility.RemoveLines(new DirectoryInfo(WorkingPaths.DesktopPath + $"/{_customFolderName}").GetDirectories().Count() + 3);
-                Colorful.Console.WriteLine($" [!]> \"{newSave_customFolderName}\" folder doesn't exist, try again :(", Color.Red);
+                Colorful.Console.WriteLine($" [!]> \"{newSave_customFolderName}\" folder doesn't exist", Color.Red);
 
                 return;
             }
@@ -165,6 +172,36 @@ namespace SoulsSaveManager
 
             ConsoleUtility.RemoveLines(new DirectoryInfo(WorkingPaths.DesktopPath + $"/{_customFolderName}").GetDirectories().Count() + 3);
             Colorful.Console.WriteLine($" [!]> \"{newSave_customFolderName}\" save succefull loaded at " + $"{DateTime.Now.ToString("hh:mm:ss")}",
+                Color.FromArgb(255, 255, 110, 144));
+        }
+
+        private void DeleteSave()
+        {
+            ConsoleUtility.RemoveLine();
+
+            if (Directory.Exists(WorkingPaths.DesktopPath + $"/{_customFolderName}"))
+                Utility.GetSaveFolderList(WorkingPaths.DesktopPath + $"/{_customFolderName}");
+            else
+            {
+                Colorful.Console.WriteLine($" [!]> {_customFolderName} doesn't exist", Color.Red);
+                return;
+            }
+
+            Colorful.Console.Write(" [?]> Folder name >>> ", Color.FromArgb(255, 255, 110, 144));
+            string? deleteTarget_customFolderName = Console.ReadLine();
+
+            if (!Directory.Exists(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{deleteTarget_customFolderName}") || deleteTarget_customFolderName == "")
+            {
+                ConsoleUtility.RemoveLines(new DirectoryInfo(WorkingPaths.DesktopPath + $"/{_customFolderName}").GetDirectories().Count() + 3);
+                Colorful.Console.WriteLine($" [!]> \"{deleteTarget_customFolderName}\" folder doesn't exist", Color.Red);
+
+                return;
+            }
+
+            Directory.Delete(WorkingPaths.DesktopPath + $"/{_customFolderName}" + $"/{deleteTarget_customFolderName}", true);
+
+            ConsoleUtility.RemoveLines(new DirectoryInfo(WorkingPaths.DesktopPath + $"/{_customFolderName}").GetDirectories().Count() + 3);
+            Colorful.Console.WriteLine($" [!]> \"{deleteTarget_customFolderName}\" save succefull deleted " + $"{DateTime.Now.ToString("hh:mm:ss")}",
                 Color.FromArgb(255, 255, 110, 144));
         }
     }
